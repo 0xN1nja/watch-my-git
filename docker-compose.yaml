@@ -1,0 +1,16 @@
+services:
+  watch-my-git:
+    build: .
+    image: watch-my-git:latest
+    container_name: watch-my-git
+    restart: unless-stopped
+
+    volumes:
+      - ./data:/app/data
+
+    env_file:
+      - .env
+
+    environment:
+      - FOLLOWERS_DB_PATH=/app/data/followers.db
+      - CHECK_INTERVAL_SECS=7200 # optional

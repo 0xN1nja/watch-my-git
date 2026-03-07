@@ -23,7 +23,7 @@ async fn main() {
         std::process::exit(1);
     });
 
-    let db = Db::open().unwrap_or_else(|e| {
+    let db = Db::open(&config.db_path).unwrap_or_else(|e| {
         eprintln!("[error] Failed to open database: {}", e);
         std::process::exit(1);
     });

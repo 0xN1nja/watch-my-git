@@ -13,8 +13,8 @@ pub struct Db {
 }
 
 impl Db {
-    pub fn open() -> Result<Self> {
-        let conn = Connection::open("followers.db")?;
+    pub fn open(path: &str) -> Result<Self> {
+        let conn = Connection::open(path)?;
         let db = Db { conn };
         db.migrate()?;
         Ok(db)
