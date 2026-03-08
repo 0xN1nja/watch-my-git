@@ -2,6 +2,8 @@
 
 Get notified when someone unfollows you on GitHub.
 
+<img width="402" height="207" alt="Discord notification preview" src="https://github.com/user-attachments/assets/1586f5ae-6c1d-40ef-b123-9a95bc93589a" />
+
 ## Setup
 
 Before running, you'll need:
