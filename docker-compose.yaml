@@ -1,7 +1,9 @@
 services:
   watch-my-git:
-    build: .
-    image: watch-my-git:latest
+    # Uncomment the line below to build the Dockerfile locally
+    # build: .
+
+    image: ghcr.io/0xn1nja/watch-my-git:latest
     container_name: watch-my-git
     restart: unless-stopped
 
@@ -13,4 +15,3 @@ services:
 
     environment:
       - FOLLOWERS_DB_PATH=/app/data/followers.db
-      - CHECK_INTERVAL_SECS=7200 # optional
