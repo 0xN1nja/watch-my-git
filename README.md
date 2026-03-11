@@ -24,7 +24,13 @@ Use the `.env.example` file in the repository to setup a `.env` file.
 
 ## Installation
 
-### Docker (recommended)
+### Docker
+
+```bash
+docker run --name watch-my-git --restart unless-stopped -v ./data:/app/data --env-file .env -e FOLLOWERS_DB_PATH=/app/data/followers.db ghcr.io/0xn1nja/watch-my-git:latest
+```
+
+### Docker compose (recommended)
 
 Create a `docker-compose.yaml`:
 
